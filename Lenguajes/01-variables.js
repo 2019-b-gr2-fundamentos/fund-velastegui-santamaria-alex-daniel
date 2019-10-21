@@ -4,7 +4,6 @@ Fecha de actualizacion: 71-10-2019
 Descripcion: Ejemplos de variables primitivas en JS
 */
 
-//Comentario
 
 // Primitivas (TIPOS DE VARIABLES)
 /*
