@@ -1,0 +1,8 @@
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-01\bin\Debug\netcoreapp1.1\Deber-01.deps.json
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-01\bin\Debug\netcoreapp1.1\Deber-01.runtimeconfig.json
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-01\bin\Debug\netcoreapp1.1\Deber-01.runtimeconfig.dev.json
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-01\obj\Debug\netcoreapp1.1\Deber-01.AssemblyInfo.cs
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-01\bin\Debug\netcoreapp1.1\Deber-01.dll
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-01\bin\Debug\netcoreapp1.1\Deber-01.pdb
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-01\obj\Debug\netcoreapp1.1\Deber-01.dll
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-01\obj\Debug\netcoreapp1.1\Deber-01.pdb
