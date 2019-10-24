@@ -1,0 +1,11 @@
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deberes-02\bin\Debug\netcoreapp3.0\Deberes-02.exe
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deberes-02\bin\Debug\netcoreapp3.0\Deberes-02.deps.json
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deberes-02\bin\Debug\netcoreapp3.0\Deberes-02.runtimeconfig.json
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deberes-02\bin\Debug\netcoreapp3.0\Deberes-02.runtimeconfig.dev.json
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deberes-02\bin\Debug\netcoreapp3.0\Deberes-02.dll
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deberes-02\bin\Debug\netcoreapp3.0\Deberes-02.pdb
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deberes-02\obj\Debug\netcoreapp3.0\Deberes-02.csprojAssemblyReference.cache
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deberes-02\obj\Debug\netcoreapp3.0\Deberes-02.AssemblyInfoInputs.cache
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deberes-02\obj\Debug\netcoreapp3.0\Deberes-02.AssemblyInfo.cs
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deberes-02\obj\Debug\netcoreapp3.0\Deberes-02.dll
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deberes-02\obj\Debug\netcoreapp3.0\Deberes-02.pdb
