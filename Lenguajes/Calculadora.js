@@ -1,47 +1,47 @@
 let operacion = prompt("Ingrese operacion a realizar");
-const suma = "suma";
-const resta = "resta";
-const multiplicacion = "multiplicacion";
-const division = "division";
-const fuerzaElectrica = "fuerza electrica"
 const constanteElectrica = 9*10^9;
-if (operacion == suma) {
+if (operacion == "suma" || "Suma" || "SUMA") {
     const numeroUnoString = prompt("Imgrse primer numero: ");
     const numeroDosString = prompt("Ingrese segundo numero: ");
     const numeroUno = Number(numeroUnoString);
     const numeroDos = Number(numeroDosString);
-    console.log("El resultado de la suma es: ",numeroUno + numeroDos);
+    const suma = numeroUno + numeroDos;
+    console.log("El resultado de la suma es: ",suma);
 }
 else {
-    if(operacion == resta){
+    if(operacion == "resta" || "Resta" || "RESTA"){
     const numeroUnoString = prompt("Imgrse primer numero: ");
     const numeroDosString = prompt("Ingrese segundo numero: ");
     const numeroUno = Number(numeroUnoString);
     const numeroDos = Number(numeroDosString);
-    console.log("El resultado de la resta es: ",numeroUno - numeroDos);
+    const resta = numeroUno - numeroDos;
+    console.log("El resultado de la resta es: ",resta);
     }else{
-        if(operacion == multiplicacion){
+        if(operacion == "multiplicacion" ){
         const numeroUnoString = prompt("Imgrse primer numero: ");
         const numeroDosString = prompt("Ingrese segundo numero: ");
         const numeroUno = Number(numeroUnoString);
         const numeroDos = Number(numeroDosString);
-        console.log("El resultado de la multiplicacion es: ",numeroUno * numeroDos);
+        const multiplicacion = numeroUno * numeroDos;
+        console.log("El resultado de la multiplicacion es: ",multiplicacion);
         }else{
-            if(operacion == division){
+            if(operacion == "division"){
             const numeroUnoString = prompt("Ingrse primer numero: ");
             const numeroDosString = prompt("Ingrese segundo numero: ");
             const numeroUno = Number(numeroUnoString);
             const numeroDos = Number(numeroDosString);
-            console.log("El resultado de la division es: ",numeroUno / numeroDos);
+            const division = numeroUno / numeroDos;
+            console.log("El resultado de la division es: ",division);
             }else{
-                if(operacion == fuerzaElectrica){
+                if(operacion == "fuerza electrica"){
                 const cargaUnoString = prompt("Ingrse valor de la primera carga: ");
                 const cargaDosString = prompt("Ingrese valor de la segunda carga: ");
                 const distanciaString = prompt("Ingrese valor de la distancia entre cargas: ");
                 const cargaUno = Number(cargaUnoString);
                 const cargaDos = Number(cargaDosString);
                 const distancia = Number(distanciaString);
-                console.log("La fuerza electrica es: ",(constanteElectrica*cargaDos*cargaUno)/(distancia^2));
+                const fuerzaElectrica = (constanteElectrica*cargaDos*cargaUno)/(distancia^2);
+                console.log("La fuerza electrica es: ",fuerzaElectrica);
                 }else{
                     console.log("No podemos calcular la operacion requerida.")
                 }
