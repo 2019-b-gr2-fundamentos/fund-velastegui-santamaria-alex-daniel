@@ -34,6 +34,45 @@ if(casadoYMosero){
     console.log("O casado o mosero o nada");
 }
 
+//TRUTY y FASLY
+if(0){
+    console.log("TRUTY")
+}else{
+    console.log("FALSY")
+}
+
+//SWITCH
+const calculo = "sumar";
+switch(calculo){
+case "sumar":
+     break;
+case "restar":
+        break;
+case "dividir":
+        break;
+default:
+}
+
+
+const edadString = prompt("Ingrese la edad");
+const edad = Number(edadString)
+if(edad>=0 && edad<=6){
+    console.log("Guagua")
+}else{
+    if(edad>6 && edad<=18){
+        console.log("Guambra")
+    }else{
+        if(edad>18 && edad<=65){
+            console.log("Longo")
+        }else{
+            if(edad>65){
+                console.log("Ruco")
+            }else{
+                console.log("Ingrese bien su edad")
+            }
+        }
+    }
+}
 
 
 
