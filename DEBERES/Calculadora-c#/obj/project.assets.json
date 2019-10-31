@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
-    "C:\\Users\\USREPS\\.nuget\\packages\\": {}
+    "C:\\Users\\s-vel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\USREPS\\Desktop\\fund-velastegui-santamaria-alex-daniel\\DEBERES\\Deberes-02\\Deberes-02.csproj",
-      "projectName": "Deberes-02",
-      "projectPath": "c:\\Users\\USREPS\\Desktop\\fund-velastegui-santamaria-alex-daniel\\DEBERES\\Deberes-02\\Deberes-02.csproj",
-      "packagesPath": "C:\\Users\\USREPS\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\USREPS\\Desktop\\fund-velastegui-santamaria-alex-daniel\\DEBERES\\Deberes-02\\obj\\",
+      "projectUniqueName": "C:\\Users\\s-vel\\Documents\\GitHub\\fund-velastegui-santamaria-alex-daniel\\DEBERES\\Calculadora-c#\\Calculadora-c#.csproj",
+      "projectName": "Calculadora-c#",
+      "projectPath": "C:\\Users\\s-vel\\Documents\\GitHub\\fund-velastegui-santamaria-alex-daniel\\DEBERES\\Calculadora-c#\\Calculadora-c#.csproj",
+      "packagesPath": "C:\\Users\\s-vel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\s-vel\\Documents\\GitHub\\fund-velastegui-santamaria-alex-daniel\\DEBERES\\Calculadora-c#\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\USREPS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\s-vel\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
