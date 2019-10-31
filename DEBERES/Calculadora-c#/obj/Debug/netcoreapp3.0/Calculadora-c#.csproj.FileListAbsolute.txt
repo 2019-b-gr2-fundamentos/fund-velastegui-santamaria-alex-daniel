@@ -1,0 +1,11 @@
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Calculadora-c#\bin\Debug\netcoreapp3.0\Calculadora-c#.exe
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Calculadora-c#\bin\Debug\netcoreapp3.0\Calculadora-c#.deps.json
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Calculadora-c#\bin\Debug\netcoreapp3.0\Calculadora-c#.runtimeconfig.json
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Calculadora-c#\bin\Debug\netcoreapp3.0\Calculadora-c#.runtimeconfig.dev.json
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Calculadora-c#\bin\Debug\netcoreapp3.0\Calculadora-c#.dll
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Calculadora-c#\bin\Debug\netcoreapp3.0\Calculadora-c#.pdb
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Calculadora-c#\obj\Debug\netcoreapp3.0\Calculadora-c#.csprojAssemblyReference.cache
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Calculadora-c#\obj\Debug\netcoreapp3.0\Calculadora-c#.AssemblyInfoInputs.cache
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Calculadora-c#\obj\Debug\netcoreapp3.0\Calculadora-c#.AssemblyInfo.cs
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Calculadora-c#\obj\Debug\netcoreapp3.0\Calculadora-c#.dll
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Calculadora-c#\obj\Debug\netcoreapp3.0\Calculadora-c#.pdb
