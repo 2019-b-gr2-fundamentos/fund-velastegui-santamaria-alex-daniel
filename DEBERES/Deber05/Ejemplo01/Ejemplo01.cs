@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*El programa usa tanto el switch como el 
+if para segunla fecha d nacimiento del cliente
+poder definir su signo sodiacal */
+using System;
 
 namespace Ejemplo01   
 {
