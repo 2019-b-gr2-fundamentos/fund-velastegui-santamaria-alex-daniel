@@ -33,7 +33,7 @@ const saludo = "\"Adios Mundo\"";
 //console.log(mensaje+"222\r\r\r"+saludo);
 
 //template strings
-const edad = 30;
+//const edad = 30;
 
 const saludoEdad = `Mi edad es: ${edad}`;
 
