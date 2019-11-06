@@ -1,0 +1,11 @@
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber05\Ejemplo03\bin\Debug\netcoreapp3.0\Ejemplo03.exe
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber05\Ejemplo03\bin\Debug\netcoreapp3.0\Ejemplo03.deps.json
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber05\Ejemplo03\bin\Debug\netcoreapp3.0\Ejemplo03.runtimeconfig.json
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber05\Ejemplo03\bin\Debug\netcoreapp3.0\Ejemplo03.runtimeconfig.dev.json
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber05\Ejemplo03\bin\Debug\netcoreapp3.0\Ejemplo03.dll
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber05\Ejemplo03\bin\Debug\netcoreapp3.0\Ejemplo03.pdb
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber05\Ejemplo03\obj\Debug\netcoreapp3.0\Ejemplo03.csprojAssemblyReference.cache
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber05\Ejemplo03\obj\Debug\netcoreapp3.0\Ejemplo03.AssemblyInfoInputs.cache
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber05\Ejemplo03\obj\Debug\netcoreapp3.0\Ejemplo03.AssemblyInfo.cs
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber05\Ejemplo03\obj\Debug\netcoreapp3.0\Ejemplo03.dll
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber05\Ejemplo03\obj\Debug\netcoreapp3.0\Ejemplo03.pdb
