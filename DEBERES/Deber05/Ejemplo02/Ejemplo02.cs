@@ -1,6 +1,4 @@
-﻿using System;
-
-/*Este programa usa el swtich y el if para determinar
+﻿/*Este programa usa el swtich y el if para determinar
 si un ciudadano es mayor o menor de edad dependiendo de su 
 edad y el Continente seleccionado */
 using System;
