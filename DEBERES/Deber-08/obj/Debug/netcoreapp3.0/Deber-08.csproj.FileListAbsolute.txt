@@ -1,0 +1,11 @@
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-08\obj\Debug\netcoreapp3.0\Deber-08.csprojAssemblyReference.cache
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-08\obj\Debug\netcoreapp3.0\Deber-08.AssemblyInfoInputs.cache
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-08\obj\Debug\netcoreapp3.0\Deber-08.AssemblyInfo.cs
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-08\bin\Debug\netcoreapp3.0\Deber-08.exe
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-08\bin\Debug\netcoreapp3.0\Deber-08.deps.json
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-08\bin\Debug\netcoreapp3.0\Deber-08.runtimeconfig.json
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-08\bin\Debug\netcoreapp3.0\Deber-08.runtimeconfig.dev.json
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-08\bin\Debug\netcoreapp3.0\Deber-08.dll
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-08\bin\Debug\netcoreapp3.0\Deber-08.pdb
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-08\obj\Debug\netcoreapp3.0\Deber-08.dll
+C:\Users\s-vel\Documents\GitHub\fund-velastegui-santamaria-alex-daniel\DEBERES\Deber-08\obj\Debug\netcoreapp3.0\Deber-08.pdb
