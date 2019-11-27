@@ -14,11 +14,12 @@ function main(){
     calculadora();
 }
 function calculadora(){
-    const operacionString :string = prompt('Seleccione el numero de operacion a realizar: ,"1.Suma","2.Resta","3.Multiplicacion", "Division"');
+    const operacionString :string = prompt('Seleccione el numero de operacion a realizar: ,"1.Suma","2.Resta","3.Multiplicacion", "4.Division","5.Salir"');
     const esSuma: boolean = operacionString == 'Suma' || operacionString == '1.Suma' || operacionString == '1';
     const esResta: boolean = operacionString == 'Resta' || operacionString == '2.Resta' || operacionString == '2';
     const esMultiplicacion: boolean = operacionString == 'Multiplicacion' || operacionString == '3.Multiplicacion' || operacionString == '3';
     const esDivision: boolean = operacionString == 'Division' || operacionString == '4.Division' || operacionString == '4'; 
+        const terminar:boolean = operacionString == 'Salir' || operacionString == '5.Salir' || operacionString == '5';
     const estaValida:boolean = esDivision || esMultiplicacion || esResta || esSuma;
     let resultado = 0;
     if(estaValida){
@@ -31,7 +32,7 @@ function calculadora(){
                 resultado = restar(numUno,numDos);
             }else{
                 if(esMultiplicacion){
-                    resultado = multiplicar(numUno,numUno);
+                    resultado = multiplicar(numUno,numDos);
                 }else{
                     if(esDivision){
                         resultado = dividir(numUno,numDos);
@@ -39,8 +40,13 @@ function calculadora(){
                 }
             }
         }
-    }else{
+        alert('El resultado es: ' + resultado);
         calculadora();
+    }else{
+        if(terminar){
+            alert("Adios")
+        }else{
+            calculadora();
+        }
     }
-    console.log('El resultado es: ',resultado);
 }

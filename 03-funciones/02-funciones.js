@@ -10,13 +10,16 @@ function multiplicar(numUno, numDos) {
 function dividir(numUno, numDos) {
     return numUno / numDos;
 }
+function main() {
+    calculadora();
+}
 function calculadora() {
-    var operacionString = prompt('Seleccione el numero de operacion a realizar: ,"1.Suma","2.Resta","3.Multiplicacion", "4.Division","5.Terminar"');
+    var operacionString = prompt('Seleccione el numero de operacion a realizar: ,"1.Suma","2.Resta","3.Multiplicacion", "4.Division","5.Salir"');
     var esSuma = operacionString == 'Suma' || operacionString == '1.Suma' || operacionString == '1';
     var esResta = operacionString == 'Resta' || operacionString == '2.Resta' || operacionString == '2';
     var esMultiplicacion = operacionString == 'Multiplicacion' || operacionString == '3.Multiplicacion' || operacionString == '3';
     var esDivision = operacionString == 'Division' || operacionString == '4.Division' || operacionString == '4';
-    var fin = operacionString == 'Terminar' || operacionString == '5.Terminar' || operacionString == '5';
+    var terminar = operacionString == 'Salir' || operacionString == '5.Salir' || operacionString == '5';
     var estaValida = esDivision || esMultiplicacion || esResta || esSuma;
     var resultado = 0;
     if (estaValida) {
@@ -31,7 +34,7 @@ function calculadora() {
             }
             else {
                 if (esMultiplicacion) {
-                    resultado = multiplicar(numUno, numUno);
+                    resultado = multiplicar(numUno, numDos);
                 }
                 else {
                     if (esDivision) {
@@ -40,17 +43,15 @@ function calculadora() {
                 }
             }
         }
-        console.log('El resultado es: ', resultado);
+        alert('El resultado es: ' + resultado);
         calculadora();
-    }else{
-        if(fin){
-            console.log("Gracias por usar nuestra calculadora");
-        }else{
+    }
+    else {
+        if (terminar) {
+            alert("Adios");
+        }
+        else {
             calculadora();
         }
     }
 }
-function main() {
-    calculadora();
-}
-
