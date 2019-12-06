@@ -2,7 +2,7 @@
 
 namespace Calculadora
 {
-    class Program
+    class Ejercicio01
     {
         static float Suma(float n1, float n2)
         {
@@ -293,7 +293,7 @@ namespace Calculadora
         }
         static void Main(string[] args)
         {
-            Program.Calculadora();
+            Ejercicio01.Calculadora();
         }
     }
 }
