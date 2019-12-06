@@ -112,8 +112,8 @@ namespace Calculadora
                                 float n1 = float.Parse(Console.ReadLine());
                                 Console.Write("Ingrese segundo operando: ");
                                 float n2 = float.Parse(Console.ReadLine());
-                                float resultado = Multiplicacion(n1, n2);
-                                Console.WriteLine($"El resultado de la multiplicacion es: {resultado}");
+                                float resultado = Division(n1, n2);
+                                Console.WriteLine($"El resultado de la division es: {resultado}");
                                 Console.ReadKey();
                             }else
                             {
@@ -147,8 +147,34 @@ namespace Calculadora
                                         }
                                     }else
                                     {
-                                        Console.WriteLine("La opcion escogida no es valida.");
-                                        Calculadora();
+                                        while(ok == false)
+                                        {
+                                            Console.WriteLine("La opcion escogida no es valida.");
+                                            Console.WriteLine("Ingresara el argumento en:");
+                                            Console.WriteLine("1. Grados");
+                                            Console.WriteLine("2. Radianes");
+                                            Console.Write("Escoja un opcion: ");
+                                            argumento = Console.ReadLine();
+                                            grados = argumento == "Grados" || argumento == "1.Grados" || argumento == "grados" || argumento == "1" || argumento == "1. Grados";
+                                            radianes = argumento == "Radianes" || argumento == "2.Radianes" || argumento == "radianes" || argumento == "2" || argumento == "2. Radianes";
+                                            ok = grados || radianes;
+                                        }
+                                        if(grados)
+                                        {
+                                            Console.Write("Ingrese el argumento en grados: ");
+                                            double n1Grados = double.Parse(Console.ReadLine());
+                                            double n1 = (n1Grados * System.Math.PI) / 180;
+                                            double resultado = Math.Round(Tangente(n1),2);
+                                            Console.WriteLine($"La tangente de {n1Grados} grados es: {resultado}");
+                                            Console.ReadKey();
+                                        }else
+                                        {
+                                            Console.Write("Ingrese el argumento en radianes: ");
+                                            double n1 = double.Parse(Console.ReadLine());
+                                            double resultado = Math.Round(Tangente(n1),2);
+                                            Console.WriteLine($"La tangente de {n1} radianes es: {resultado}");
+                                            Console.ReadKey();
+                                        }
                                     }
                                 }else
                                 {
@@ -182,7 +208,34 @@ namespace Calculadora
                                             }
                                         }else
                                         {
-                                            Console.WriteLine("La opcion escogida no es valida.");
+                                            while(ok == false)
+                                            {
+                                                Console.WriteLine("La opcion escogida no es valida.");
+                                                Console.WriteLine("Ingresara el argumento en:");
+                                                Console.WriteLine("1. Grados");
+                                                Console.WriteLine("2. Radianes");
+                                                Console.Write("Escoja un opcion: ");
+                                                argumento = Console.ReadLine();
+                                                grados = argumento == "Grados" || argumento == "1.Grados" || argumento == "grados" || argumento == "1" || argumento == "1. Grados";
+                                                radianes = argumento == "Radianes" || argumento == "2.Radianes" || argumento == "radianes" || argumento == "2" || argumento == "2. Radianes";
+                                                ok = grados || radianes;
+                                            }
+                                            if(grados)
+                                            {
+                                                Console.Write("Ingrese el argumento en grados: ");
+                                                double n1Grados = double.Parse(Console.ReadLine());
+                                                double n1 = (n1Grados * System.Math.PI) / 180;
+                                                double resultado = Math.Round(Seno(n1),2);
+                                                Console.WriteLine($"El seno de {n1Grados} grados es: {resultado}");
+                                                Console.ReadKey();
+                                            }else
+                                            {
+                                                Console.Write("Ingrese el argumento en radianes: ");
+                                                double n1 = double.Parse(Console.ReadLine());
+                                                double resultado = Math.Round(Seno(n1),2);
+                                                Console.WriteLine($"el seno de {n1} radianes es: {resultado}");
+                                                Console.ReadKey();
+                                            }
                                         }
                                     }else
                                     {
@@ -216,8 +269,34 @@ namespace Calculadora
                                                 }
                                             }else
                                             {
-                                                Console.WriteLine("La opcion escogida no es valida.");
-                                                Calculadora();
+                                                while(ok == false)
+                                                {
+                                                    Console.WriteLine("La opcion escogida no es valida.");
+                                                    Console.WriteLine("Ingresara el argumento en:");
+                                                    Console.WriteLine("1. Grados");
+                                                    Console.WriteLine("2. Radianes");
+                                                    Console.Write("Escoja un opcion: ");
+                                                    argumento = Console.ReadLine();
+                                                    grados = argumento == "Grados" || argumento == "1.Grados" || argumento == "grados" || argumento == "1" || argumento == "1. Grados";
+                                                    radianes = argumento == "Radianes" || argumento == "2.Radianes" || argumento == "radianes" || argumento == "2" || argumento == "2. Radianes";
+                                                    ok = grados || radianes;
+                                                }
+                                                if(grados)
+                                                {
+                                                    Console.Write("Ingrese el argumento en grados: ");
+                                                    double n1Grados = double.Parse(Console.ReadLine());
+                                                    double n1 = (n1Grados * System.Math.PI) / 180;
+                                                    double resultado = Math.Round(Coseno(n1),2);
+                                                    Console.WriteLine($"El coseno de {n1Grados} grados es: {resultado}");
+                                                    Console.ReadKey();
+                                                }else
+                                                {
+                                                    Console.Write("Ingrese el argumento en radianes: ");
+                                                    double n1 = double.Parse(Console.ReadLine());
+                                                    double resultado = Math.Round(Coseno(n1),2);
+                                                    Console.WriteLine($"El coseno de {n1} radianes es: {resultado}");
+                                                    Console.ReadKey();
+                                                }
                                             }   
                                         }else
                                         {
