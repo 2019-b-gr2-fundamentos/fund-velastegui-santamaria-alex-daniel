@@ -1,3 +1,4 @@
+
 /*Escriba un programa que verifique si dos matrices son 
 iguales ( la matriz es de dos dimensiones n * m ) 
 "n" y "m" pueden ser iguales o distintas*/
@@ -70,4 +71,30 @@ function Filas(matriz1): void
         suma = suma + matriz1[i][1];
     }
     console.log("La suma de la primera fila es: "+suma);
+
+function recorrerArreglo(arregloNumeros : number[], indice: number){
+    const tamaño = arregloNumeros.length-1
+    if(indice == tamaño){
+        console.log("Fin del arreglo");
+    }else{
+        indice ++ 
+        console.log(arregloNumeros[indice])
+        recorrerArreglo(arregloNumeros,indice); 
+    }
+
+}
+
+function immprimirMensajeNVeces(mensaje:string , numeroVeces:number):void{
+     if(numeroVeces == 0){
+         console.log("Se terminó")
+     }else{
+         console.log(mensaje)
+         const nuevoNumeroVeces = numeroVeces - 1;
+         immprimirMensajeNVeces(mensaje,nuevoNumeroVeces)
+     }
+}
+
+function main(){
+    recorrerArreglo([1, 2, 3, 4],0)
+
 }

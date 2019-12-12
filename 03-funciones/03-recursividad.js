@@ -1,3 +1,4 @@
+
 /*Escriba un programa que verifique si dos matrices son
 iguales ( la matriz es de dos dimensiones n * m )
 "n" y "m" pueden ser iguales o distintas*/
@@ -61,3 +62,30 @@ function Columnas(matriz1) {
         suma = 0;
     }
 }
+
+
+function recorrerArreglo(arregloNumeros, indice) {
+    var tamaño = arregloNumeros.length;
+    if (indice == tamaño) {
+        console.log("Fin del arreglo");
+    }
+    else {
+        console.log(arregloNumeros[indice]);
+        indice++;
+        recorrerArreglo(arregloNumeros, indice);
+    }
+}
+function immprimirMensajeNVeces(mensaje, numeroVeces) {
+    if (numeroVeces == 0) {
+        console.log("Se terminó");
+    }
+    else {
+        console.log(mensaje);
+        var nuevoNumeroVeces = numeroVeces - 1;
+        immprimirMensajeNVeces(mensaje, nuevoNumeroVeces);
+    }
+}
+function main() {
+    recorrerArreglo([1, 2, 3, 4], 0);
+}
+
