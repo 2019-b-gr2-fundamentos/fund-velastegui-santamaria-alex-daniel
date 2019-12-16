@@ -71,6 +71,7 @@ function Filas(matriz1): void
         suma = suma + matriz1[i][1];
     }
     console.log("La suma de la primera fila es: "+suma);
+}
 
 function recorrerArreglo(arregloNumeros : number[], indice: number){
     const tamaño = arregloNumeros.length-1
@@ -94,7 +95,3 @@ function immprimirMensajeNVeces(mensaje:string , numeroVeces:number):void{
      }
 }
 
-function main(){
-    recorrerArreglo([1, 2, 3, 4],0)
-
-}
