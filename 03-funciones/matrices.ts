@@ -8,6 +8,7 @@ function obtenerPrimeraDimension(matrizUno: number[][]):number | boolean
         return primeraDimensionArreglo;
     }else
     {
+        //console.log("No es una matriz");
         return false;
     }
 }
@@ -22,6 +23,7 @@ function obtenerSegundaDimension(matrizUno: number[][]):number | boolean
         const segundaDimension = matrizUno[1].length;
         return segundaDimension;
     }
+    //console.log("No es una matriz");
     return false;
 }
 
@@ -56,7 +58,59 @@ function verificarTodosElementosDeUnArregloSonArreglos(arreglo: any[]):boolean
     return true;
 }
 
-function compararMatriz()
+function matricesValidas(matrizUno: number[][], matrizDos: number[][]): boolean
 {
-    
+    const matrizUnoPrimeraDimension = obtenerPrimeraDimension(matrizUno);
+    const matrizUnoSegundaDimension = obtenerSegundaDimension(matrizUno);
+    const matrizDosPrimeraDimension = obtenerPrimeraDimension(matrizDos);
+    const matrizDosSegundaDimension = obtenerSegundaDimension(matrizDos);
+    const esValidoFilas = matrizUnoPrimeraDimension == matrizDosPrimeraDimension && matrizDosPrimeraDimension != false;
+    const esValidoColumnas = matrizUnoSegundaDimension == matrizDosSegundaDimension && matrizDosSegundaDimension != false;
+    const esValido = esValidoFilas && esValidoColumnas;
+    if(esValido)
+    {
+        return esValido;
+    }else
+    {
+        console.log("Los datos ingresados no corresponden a una matriz");
+        return false;
+    }
+
 }
+
+function compararMatriz(matrizUno: number[][], matrizDos: number[][])
+{
+    const esValido = matricesValidas(matrizUno, matrizDos);
+    if(esValido)
+    {
+        const matrizPrimeraDimension = obtenerPrimeraDimension(matrizUno);
+        const matrizSegundaDimension = obtenerSegundaDimension(matrizUno);
+        let loSon = true;
+        for(var i = 0; i < matrizPrimeraDimension; i ++)
+        {
+            for(var j = 0; j < matrizSegundaDimension; j ++)
+            {
+                if(loSon)
+                {
+                    loSon = matrizUno[i][j] == matrizDos[i][j];
+                }
+            }
+        }
+
+        if(loSon)
+        {
+            console.log("Las matrices son iguales");
+        }else
+        {
+            console.log("Las matrices no son iguales")
+        }
+    }
+}
+
+function main02()
+{
+    const matrizUno = [[1, 2, 3],[1, 2, 3]];
+    const matrizDos = [[1, 2, 3],[1, 2, 3]];
+    compararMatriz(matrizUno, matrizDos);
+}
+main02();
