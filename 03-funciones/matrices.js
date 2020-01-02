@@ -82,7 +82,7 @@ function compararMatriz(matrizUno, matrizDos) {
     }
 }
 function main02() {
-    var matrizUno = [[1, 2], [1, 2, 3]];
+    var matrizUno = [[1, 1, 3], [1, 2, 3]];
     var matrizDos = [[1, 2, 3], [1, 2, 3]];
     compararMatriz(matrizUno, matrizDos);
 }
