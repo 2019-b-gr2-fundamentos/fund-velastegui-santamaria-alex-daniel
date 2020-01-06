@@ -121,7 +121,7 @@ namespace Deber_09
 
             SumaFilas(matrizA);
 
-            //SUMADE COLUMNAS
+            //SUMA DE COLUMNAS
 
             SumaColumnas(matrizA);
         }
