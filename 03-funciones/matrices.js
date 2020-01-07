@@ -56,7 +56,7 @@ function matricesValidas(matrizUno, matrizDos) {
         return esValido;
     }
     else {
-        console.log("Los datos ingresados no corresponden a una matriz");
+        console.log("Los datos ingresados no corresponden a matrices iguales");
         return false;
     }
 }
@@ -81,9 +81,46 @@ function compararMatriz(matrizUno, matrizDos) {
         }
     }
 }
+
+function intercambiarDiagonalesDeUnaMatriz(matrizUno)
+{
+    var matrizPrimeraDimension = obtenerPrimeraDimension(matrizUno) - 1;
+    var matrizSegundaDimension = obtenerSegundaDimension(matrizUno) - 1;
+    var esCuadrada = matrizSegundaDimension == matrizPrimeraDimension;
+    var esValidoFilas = matrizPrimeraDimension != false;
+    var esValidoColumnas = matrizSegundaDimension != false;
+    var esValido = esValidoFilas && esValidoColumnas && esCuadrada;
+    if(esValido)
+    {
+        var matrizDos = [[0, 0, 0, 0], [0, 0, 0, 0],[0, 0, 0, 0], [0, 0, 0, 0]];
+        for(var i = 0; i <= matrizPrimeraDimension; i++)
+        {
+            for(var j = 0; j <= matrizSegundaDimension; j ++)
+            {
+                if(i != j && j != matrizPrimeraDimension - i)
+                {
+                    matrizDos[i][j] = matrizUno[i][j]
+                }else
+                {
+                    matrizDos[i][matrizSegundaDimension - i] = matrizUno[i][i]
+                    matrizDos[i][i] = matrizUno[i][matrizSegundaDimension - i]
+                }
+            }            
+        }
+        for(var i = 0; i <= matrizPrimeraDimension; i++)
+        {
+            for(var j = 0; j <= matrizSegundaDimension; j ++)
+            {
+                console.log(matrizDos[i][j]);
+            }
+        }
+    }
+}
+
 function main02() {
-    var matrizUno = [[1, 1, 3], [1, 2, 3]];
+    var matrizUno = [[1, 1, 3, 9], [2, 4, 5, 10],[6, 7, 8, 11],[12, 13, 14, 15]];
     var matrizDos = [[1, 2, 3], [1, 2, 3]];
-    compararMatriz(matrizUno, matrizDos);
+    //compararMatriz(matrizUno, matrizDos);
+    intercambiarDiagonalesDeUnaMatriz(matrizUno);
 }
 main02();
