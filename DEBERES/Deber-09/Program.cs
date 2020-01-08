@@ -36,7 +36,6 @@ namespace Deber_09
                 suma = 0;
             }
         }
-
         static bool MatricesIguales(float[,] matrizA, float[,] matrizB )
         {
             bool siSon = true;
@@ -71,6 +70,40 @@ namespace Deber_09
             return siSon;
         }
 
+        static void IntercambiarDiagonalesDeUnaMatriz(float[,] matrizA)
+        {
+            int filas = matrizA.GetUpperBound(0) + 1;
+            int columnas = matrizA.GetUpperBound(1) +1;
+            bool esValida = filas == columnas;
+            if(esValida)
+            {
+                float[,] matrizT = new float[filas, columnas];
+                for(int i = 0; i< filas; i++)
+                {
+                    for(int j = 0; j< columnas; j++)
+                    {
+                        if(i != j && j != filas -1 -i) 
+                        {
+                            matrizT[i, j] = matrizA[i, j];
+                        }else
+                        {
+                            matrizT[i , columnas -1 - i] = matrizA[i ,i];
+                            matrizT[i, i] = matrizA[i, columnas -1 - i];
+                        }
+                    }
+                }
+                for(int i = 0; i< filas; i++)
+                {
+                    for(int j = 0; j< columnas; j++)
+                    {
+                        Console.WriteLine(matrizT[i, j]);
+                    }
+                }
+            }else
+            {
+                Console.WriteLine("La matriz ingresada no es cuadrada");
+            }
+        }
         static void Main(string[] args)
         {
 
@@ -92,7 +125,7 @@ namespace Deber_09
 
             //MATRIZ B
 
-            Console.Write("Ingrese el numero de filas de la matriz B: ");
+            /*Console.Write("Ingrese el numero de filas de la matriz B: ");
             int filasB = int.Parse(Console.ReadLine());
             Console.Write("Ingrese el numero de columnas de la matriz B: ");
             int columnasB = int.Parse(Console.ReadLine());
@@ -123,7 +156,12 @@ namespace Deber_09
 
             //SUMA DE COLUMNAS
 
-            SumaColumnas(matrizA);
+            SumaColumnas(matrizA);*/
+
+            //INTERCAMBIO DE DIAGONALES
+
+           IntercambiarDiagonalesDeUnaMatriz(matrizA);
+
         }
     }
 }
