@@ -6,10 +6,15 @@
 Sincrono vs. Asincrono*/
 
 import * as prompts from 'prompts';
+import { respuestaEdad } from './interfaces/respuesta-edad.interface';
+import { respuestaNombre } from './interfaces/respuesta-nombre.interface';
+import { respuestaPreguntas } from './interfaces/respuesta-preguntas.interface';
 
 function main()
 {
-    obtenerDatosAnimalPerrito();
+    obtenerDatosAnimalPerritoSincono()
+    .then()
+    .catch();
 }
 
 function obtenerDatosAnimalPerrito()
@@ -53,6 +58,52 @@ promesaEdad
         }
     );
 
+}
+
+ async function obtenerDatosAnimalPerritoSincono()
+{
+    const preguntas = [
+        {
+            type: 'number',
+            name: 'edad',
+            message: '¿Puedes darme tu edad?'
+        },
+        {
+            type: 'text',
+            name: 'nombre',
+            message: '¿Puedes darme tu nombre?'
+        },
+        {
+            type: 'text',
+            name: 'cedula',
+            message: '¿Puedes darme tu cedula?'
+        }
+    ]
+    console.log('Inicio');
+
+    /*const edad: respuestaEdad = await prompts
+    ({
+        type: 'number',
+        name: 'edad',
+        message: '¿Puedes darme tu edad?'
+    });
+    const nombre: respuestaNombre = await prompts
+    ({
+        type: 'text',
+        name: 'nombre',
+        message: '¿Puedes darme tu nombre?'
+    });
+    const cedula= await prompts
+    ({
+        type: 'text',
+        name: 'cedula',
+        message: '¿Puedes darme tu cedula?'
+    });
+    console.log('Edad: ', edad.edad);
+    console.log('Nombre: ',nombre.nombre);*/
+    const respuesta: respuestaPreguntas = await prompts(preguntas);
+    console.log('Respuesta', respuesta);
+    console.log("Fin");
 }
 
 main();
