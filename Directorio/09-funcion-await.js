@@ -36,60 +36,24 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var _01_funcion_opcion_1 = require("./01-funcion-opcion");
-var _03_funcion_crear_1 = require("./03-funcion-crear");
-var _06_funcion_agregar_1 = require("./06-funcion-agregar");
-var _09_funcion_await_1 = require("./09-funcion-await");
-function menu(directorio) {
+var prompts = require("prompts");
+function esperear() {
     return __awaiter(this, void 0, void 0, function () {
-        var opcion, _a, longitudNueva;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
+        var esperear, esperarRespuesta;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
                 case 0:
-                    console.log("\n\n1.Crear un directorio\n");
-                    console.log("2.Editar el directorio\n");
-                    console.log("3.Eliminar una pelicula\n");
-                    console.log("4.Agregar una pelicula\n");
-                    console.log("5.Salir\n");
-                    return [4 /*yield*/, _01_funcion_opcion_1.funcionOpcion()];
+                    esperear = {
+                        type: 'text',
+                        nombre: 'esperar',
+                        message: 'Presione ENTER para continuar'
+                    };
+                    return [4 /*yield*/, prompts(esperear)];
                 case 1:
-                    opcion = _b.sent();
-                    _a = opcion;
-                    switch (_a) {
-                        case 1: return [3 /*break*/, 2];
-                        case 2: return [3 /*break*/, 5];
-                        case 3: return [3 /*break*/, 6];
-                        case 4: return [3 /*break*/, 7];
-                    }
-                    return [3 /*break*/, 10];
-                case 2: return [4 /*yield*/, _03_funcion_crear_1.crearDirectorio()];
-                case 3:
-                    directorio = _b.sent();
-                    console.log("El directorio actual es:\n", directorio);
-                    return [4 /*yield*/, _09_funcion_await_1.esperear()];
-                case 4:
-                    _b.sent();
-                    menu(directorio);
-                    return [3 /*break*/, 11];
-                case 5: return [3 /*break*/, 11];
-                case 6: return [3 /*break*/, 11];
-                case 7:
-                    longitudNueva = directorio.length;
-                    return [4 /*yield*/, _06_funcion_agregar_1.agregarPelicula(longitudNueva, directorio)];
-                case 8:
-                    directorio = _b.sent();
-                    console.log("El nuevo directorio es:\n", directorio);
-                    return [4 /*yield*/, _09_funcion_await_1.esperear()];
-                case 9:
-                    _b.sent();
-                    menu(directorio);
-                    return [3 /*break*/, 11];
-                case 10:
-                    console.log("Hasta Luego!!");
-                    return [3 /*break*/, 11];
-                case 11: return [2 /*return*/];
+                    esperarRespuesta = _a.sent();
+                    return [2 /*return*/];
             }
         });
     });
 }
-exports.menu = menu;
+exports.esperear = esperear;

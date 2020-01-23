@@ -58,4 +58,3 @@ function funcionOpcion() {
     });
 }
 exports.funcionOpcion = funcionOpcion;
-//Directorio\Interfaces\peliculas.interface.ts

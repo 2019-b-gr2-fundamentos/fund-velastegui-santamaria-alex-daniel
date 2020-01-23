@@ -1,6 +1,7 @@
 import { funcionOpcion } from "./01-funcion-opcion";
 import { crearDirectorio } from "./03-funcion-crear";
 import { agregarPelicula } from "./06-funcion-agregar";
+import { esperear } from "./09-funcion-await";
 
 export async function menu(directorio: any[])
 {
@@ -15,6 +16,7 @@ export async function menu(directorio: any[])
         case 1: 
         directorio = await crearDirectorio();
         console.log("El directorio actual es:\n", directorio);
+        await esperear();
         menu(directorio);
         break;
         case 2: break;
@@ -22,7 +24,8 @@ export async function menu(directorio: any[])
         case 4:
         const longitudNueva = directorio.length;
         directorio = await agregarPelicula(longitudNueva, directorio);
-        console.log("El nuevo directorio es:\n", directorio); 
+        console.log("El nuevo directorio es:\n", directorio);
+        await esperear(); 
         menu(directorio);
         break;
         default: 
