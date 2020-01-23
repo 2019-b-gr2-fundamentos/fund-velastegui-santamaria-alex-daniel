@@ -8,7 +8,7 @@ export async function pedirDatos()
         {
             type:'text',
             name:'nombrePelicula',
-            message:'Ingresar el nombre de la pelicula:'
+            message:'\nIngresar el nombre de la pelicula:'
         },
         {
             type:'text',
@@ -32,5 +32,5 @@ export async function pedirDatos()
         }
     ]
     const respuestasPelicula:peliculaInterface = await prompts(peliculas);
-    console.log(respuestasPelicula);
+    return respuestasPelicula;
 }

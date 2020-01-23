@@ -36,16 +36,26 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var _08_funcion_menu_1 = require("./08-funcion-menu");
-function main() {
+var prompts = require("prompts");
+function funcionOpcion() {
     return __awaiter(this, void 0, void 0, function () {
-        var directorio;
+        var opcion, opcionRespuesta;
         return __generator(this, function (_a) {
-            console.log("\n\n\tBienvenido al catalogo de peliculas\n");
-            directorio = [];
-            _08_funcion_menu_1.menu(directorio);
-            return [2 /*return*/];
+            switch (_a.label) {
+                case 0:
+                    opcion = {
+                        type: 'number',
+                        name: 'numeroDeOpcion',
+                        message: '¿Que desea realizar?',
+                        validate: function (value) { return (value < 0 || value > 5) ? "ESCOGER SOLO DE ENTRE LAS OPCIONES QUE APARECEN EN PANTALLA" : true; }
+                    };
+                    return [4 /*yield*/, prompts(opcion)];
+                case 1:
+                    opcionRespuesta = _a.sent();
+                    return [2 /*return*/, opcionRespuesta.numeroDeOpcion];
+            }
         });
     });
 }
-main();
+exports.funcionOpcion = funcionOpcion;
+//Directorio\Interfaces\peliculas.interface.ts

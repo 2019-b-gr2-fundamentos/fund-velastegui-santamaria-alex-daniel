@@ -36,16 +36,53 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var _08_funcion_menu_1 = require("./08-funcion-menu");
-function main() {
+var _01_funcion_opcion_1 = require("./01-funcion-opcion");
+var _03_funcion_crear_1 = require("./03-funcion-crear");
+var _06_funcion_agregar_1 = require("./06-funcion-agregar");
+function menu(directorio) {
     return __awaiter(this, void 0, void 0, function () {
-        var directorio;
-        return __generator(this, function (_a) {
-            console.log("\n\n\tBienvenido al catalogo de peliculas\n");
-            directorio = [];
-            _08_funcion_menu_1.menu(directorio);
-            return [2 /*return*/];
+        var opcion, _a, longitudNueva;
+        return __generator(this, function (_b) {
+            switch (_b.label) {
+                case 0:
+                    console.log("1.Crear un directorio\n");
+                    console.log("2.Editar el directorio\n");
+                    console.log("3.Eliminar una pelicula\n");
+                    console.log("4.Agregar una pelicula\n");
+                    console.log("5.Salir\n");
+                    return [4 /*yield*/, _01_funcion_opcion_1.funcionOpcion()];
+                case 1:
+                    opcion = _b.sent();
+                    _a = opcion;
+                    switch (_a) {
+                        case 1: return [3 /*break*/, 2];
+                        case 2: return [3 /*break*/, 4];
+                        case 3: return [3 /*break*/, 5];
+                        case 4: return [3 /*break*/, 6];
+                    }
+                    return [3 /*break*/, 8];
+                case 2: return [4 /*yield*/, _03_funcion_crear_1.crearDirectorio()];
+                case 3:
+                    directorio = _b.sent();
+                    console.log("El directorio actual es:\n", directorio);
+                    menu(directorio);
+                    return [3 /*break*/, 9];
+                case 4: return [3 /*break*/, 9];
+                case 5: return [3 /*break*/, 9];
+                case 6:
+                    longitudNueva = directorio.length;
+                    return [4 /*yield*/, _06_funcion_agregar_1.agregarPelicula(longitudNueva, directorio)];
+                case 7:
+                    directorio = _b.sent();
+                    console.log("El nuevo directorio es:\n", directorio);
+                    menu(directorio);
+                    return [3 /*break*/, 9];
+                case 8:
+                    console.log("Hasta Luego!!");
+                    return [3 /*break*/, 9];
+                case 9: return [2 /*return*/];
+            }
         });
     });
 }
-main();
+exports.menu = menu;

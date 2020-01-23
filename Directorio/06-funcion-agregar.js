@@ -36,16 +36,19 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var _08_funcion_menu_1 = require("./08-funcion-menu");
-function main() {
+var _02_funcion_pedir_datos_1 = require("./02-funcion-pedir-datos");
+function agregarPelicula(longitud, directorio) {
     return __awaiter(this, void 0, void 0, function () {
-        var directorio;
+        var peliculaNueva;
         return __generator(this, function (_a) {
-            console.log("\n\n\tBienvenido al catalogo de peliculas\n");
-            directorio = [];
-            _08_funcion_menu_1.menu(directorio);
-            return [2 /*return*/];
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, _02_funcion_pedir_datos_1.pedirDatos()];
+                case 1:
+                    peliculaNueva = _a.sent();
+                    directorio[longitud] = peliculaNueva;
+                    return [2 /*return*/, directorio];
+            }
         });
     });
 }
-main();
+exports.agregarPelicula = agregarPelicula;

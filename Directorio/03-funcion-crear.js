@@ -36,16 +36,42 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var _08_funcion_menu_1 = require("./08-funcion-menu");
-function main() {
+var prompts = require("prompts");
+var _02_funcion_pedir_datos_1 = require("./02-funcion-pedir-datos");
+function crearDirectorio() {
     return __awaiter(this, void 0, void 0, function () {
-        var directorio;
-        return __generator(this, function (_a) {
-            console.log("\n\n\tBienvenido al catalogo de peliculas\n");
-            directorio = [];
-            _08_funcion_menu_1.menu(directorio);
-            return [2 /*return*/];
+        var peliculasInicialPregunta, peliculasInicial, cantidadDePeliculas, directorio, i, _a, _b;
+        return __generator(this, function (_c) {
+            switch (_c.label) {
+                case 0:
+                    console.log("\nEmpecemos!!\n");
+                    peliculasInicialPregunta = {
+                        type: 'number',
+                        name: 'numeroDeOpcion',
+                        message: '¿Cuantas peliculas quieres añadir para empezar?',
+                        validate: function (value) { return value < 0 ? "Debe ser un numero mayor a 0." : true; }
+                    };
+                    return [4 /*yield*/, prompts(peliculasInicialPregunta)];
+                case 1:
+                    peliculasInicial = _c.sent();
+                    cantidadDePeliculas = peliculasInicial.numeroDeOpcion;
+                    directorio = [];
+                    i = 0;
+                    _c.label = 2;
+                case 2:
+                    if (!(i < cantidadDePeliculas)) return [3 /*break*/, 5];
+                    _a = directorio;
+                    _b = i;
+                    return [4 /*yield*/, _02_funcion_pedir_datos_1.pedirDatos()];
+                case 3:
+                    _a[_b] = _c.sent();
+                    _c.label = 4;
+                case 4:
+                    i++;
+                    return [3 /*break*/, 2];
+                case 5: return [2 /*return*/, directorio];
+            }
         });
     });
 }
-main();
+exports.crearDirectorio = crearDirectorio;

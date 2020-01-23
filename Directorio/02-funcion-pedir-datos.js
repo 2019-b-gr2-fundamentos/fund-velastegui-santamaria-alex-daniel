@@ -36,16 +36,46 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var _08_funcion_menu_1 = require("./08-funcion-menu");
-function main() {
+var prompts = require("prompts");
+function pedirDatos() {
     return __awaiter(this, void 0, void 0, function () {
-        var directorio;
+        var peliculas, respuestasPelicula;
         return __generator(this, function (_a) {
-            console.log("\n\n\tBienvenido al catalogo de peliculas\n");
-            directorio = [];
-            _08_funcion_menu_1.menu(directorio);
-            return [2 /*return*/];
+            switch (_a.label) {
+                case 0:
+                    peliculas = [
+                        {
+                            type: 'text',
+                            name: 'nombrePelicula',
+                            message: '\nIngresar el nombre de la pelicula:'
+                        },
+                        {
+                            type: 'text',
+                            name: 'generoPelicula',
+                            message: 'Ingresar el genero de la pelicula:'
+                        },
+                        {
+                            type: 'number',
+                            name: 'duracionPelicula',
+                            message: 'Ingresar la duracion de la pelicula:'
+                        },
+                        {
+                            type: 'text',
+                            name: 'directorPelicula',
+                            message: 'Ingresar el director de la pelicula:'
+                        },
+                        {
+                            type: 'text',
+                            name: 'protagonistaPelicula',
+                            message: '¿Cual es el protagonista de la pelicula?'
+                        }
+                    ];
+                    return [4 /*yield*/, prompts(peliculas)];
+                case 1:
+                    respuestasPelicula = _a.sent();
+                    return [2 /*return*/, respuestasPelicula];
+            }
         });
     });
 }
-main();
+exports.pedirDatos = pedirDatos;
