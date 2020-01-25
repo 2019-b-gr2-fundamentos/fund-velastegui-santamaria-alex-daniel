@@ -1,8 +1,8 @@
 import { pedirDatos } from './02-funcion-pedir-datos'
 
-export async function agregarPelicula(longitud:number, directorio: any[])
+export async function agregarPelicula(directorio: any[])
 {
     const peliculaNueva = await pedirDatos();
-    directorio[longitud] = peliculaNueva;
+    directorio.push(peliculaNueva);
     return directorio;
 }

@@ -37,14 +37,20 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var _08_funcion_menu_1 = require("./08-funcion-menu");
+var _03_funcion_crear_1 = require("./03-funcion-crear");
 function main() {
     return __awaiter(this, void 0, void 0, function () {
         var directorio;
         return __generator(this, function (_a) {
-            console.log("\n\n\tBienvenido al catalogo de peliculas\n");
-            directorio = [];
-            _08_funcion_menu_1.menu(directorio);
-            return [2 /*return*/];
+            switch (_a.label) {
+                case 0:
+                    console.log("\n\tBIENVENIDO A SU DIRECTORIO DE PELICULAS");
+                    return [4 /*yield*/, _03_funcion_crear_1.crearDirectorio()];
+                case 1:
+                    directorio = _a.sent();
+                    _08_funcion_menu_1.menu(directorio);
+                    return [2 /*return*/];
+            }
         });
     });
 }

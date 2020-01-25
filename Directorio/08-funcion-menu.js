@@ -45,7 +45,8 @@ function menu(directorio) {
         return __generator(this, function (_b) {
             switch (_b.label) {
                 case 0:
-                    console.log("1.Crear un directorio\n");
+                    console.log("\n\nESCOGA UNA LA ACCION QUE DESEA REALIZAR\n");
+                    console.log("1.Buscar en el directorio\n");
                     console.log("2.Editar el directorio\n");
                     console.log("3.Eliminar una pelicula\n");
                     console.log("4.Agregar una pelicula\n");
@@ -78,7 +79,7 @@ function menu(directorio) {
                     menu(directorio);
                     return [3 /*break*/, 9];
                 case 8:
-                    console.log("Hasta Luego!!");
+                    console.log("\nHASTA LUEGO!!");
                     return [3 /*break*/, 9];
                 case 9: return [2 /*return*/];
             }
