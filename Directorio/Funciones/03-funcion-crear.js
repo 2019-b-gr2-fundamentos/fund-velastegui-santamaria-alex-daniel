@@ -38,6 +38,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var prompts = require("prompts");
 var _02_funcion_pedir_datos_1 = require("./02-funcion-pedir-datos");
+var _11_funcion_imprimir_1 = require("./11-funcion-imprimir");
+var _09_funcion_await_1 = require("./09-funcion-await");
 function crearDirectorio() {
     return __awaiter(this, void 0, void 0, function () {
         var peliculasInicialPregunta, peliculasInicial, cantidadDePeliculas, directorio, i, _a, _b;
@@ -69,7 +71,15 @@ function crearDirectorio() {
                 case 4:
                     i++;
                     return [3 /*break*/, 2];
-                case 5: return [2 /*return*/, directorio];
+                case 5:
+                    console.log("\nEl directorio creado es:\n");
+                    return [4 /*yield*/, _11_funcion_imprimir_1.imprimirPeliculas(directorio)];
+                case 6:
+                    _c.sent();
+                    return [4 /*yield*/, _09_funcion_await_1.esperear()];
+                case 7:
+                    _c.sent();
+                    return [2 /*return*/, directorio];
             }
         });
     });

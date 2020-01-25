@@ -36,22 +36,61 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var _08_funcion_menu_1 = require("./Funciones/08-funcion-menu");
-var _03_funcion_crear_1 = require("./Funciones/03-funcion-crear");
-function main() {
+var _01_funcion_opcion_1 = require("./01-funcion-opcion");
+var _06_funcion_agregar_1 = require("./06-funcion-agregar");
+var _09_funcion_await_1 = require("./09-funcion-await");
+var _10_funcion_tabla_1 = require("./10-funcion-tabla");
+var _11_funcion_imprimir_1 = require("./11-funcion-imprimir");
+var _04_funcion_buscar_1 = require("./04-funcion-buscar");
+function menu(directorio) {
     return __awaiter(this, void 0, void 0, function () {
-        var directorio;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
+        var opcion, _a, tablaPeliculasAgregar;
+        return __generator(this, function (_b) {
+            switch (_b.label) {
                 case 0:
-                    console.log("\n\tBIENVENIDO A SU DIRECTORIO DE PELICULAS");
-                    return [4 /*yield*/, _03_funcion_crear_1.crearDirectorio()];
+                    console.log("\nESCOGA UNA LA ACCION QUE DESEA REALIZAR\n");
+                    console.log("1.Buscar en el directorio");
+                    console.log("2.Editar el directorio");
+                    console.log("3.Eliminar una pelicula");
+                    console.log("4.Agregar una pelicula");
+                    console.log("5.Salir\n");
+                    return [4 /*yield*/, _01_funcion_opcion_1.funcionOpcion()];
                 case 1:
-                    directorio = _a.sent();
-                    _08_funcion_menu_1.menu(directorio);
-                    return [2 /*return*/];
+                    opcion = _b.sent();
+                    _a = opcion;
+                    switch (_a) {
+                        case 1: return [3 /*break*/, 2];
+                        case 2: return [3 /*break*/, 3];
+                        case 3: return [3 /*break*/, 4];
+                        case 4: return [3 /*break*/, 5];
+                    }
+                    return [3 /*break*/, 10];
+                case 2:
+                    _04_funcion_buscar_1.buscarPelicula(directorio);
+                    return [3 /*break*/, 11];
+                case 3: return [3 /*break*/, 11];
+                case 4: return [3 /*break*/, 11];
+                case 5: return [4 /*yield*/, _06_funcion_agregar_1.agregarPelicula(directorio)];
+                case 6:
+                    directorio = _b.sent();
+                    return [4 /*yield*/, _10_funcion_tabla_1.realizarTabla(directorio)];
+                case 7:
+                    tablaPeliculasAgregar = _b.sent();
+                    console.log("\nLas peliculas actuales son:\n");
+                    return [4 /*yield*/, _11_funcion_imprimir_1.imprimirPeliculas(directorio)];
+                case 8:
+                    _b.sent();
+                    return [4 /*yield*/, _09_funcion_await_1.esperear()];
+                case 9:
+                    _b.sent();
+                    menu(directorio);
+                    return [3 /*break*/, 11];
+                case 10:
+                    console.log("\nHASTA LUEGO!!");
+                    return [3 /*break*/, 11];
+                case 11: return [2 /*return*/];
             }
         });
     });
 }
-main();
+exports.menu = menu;

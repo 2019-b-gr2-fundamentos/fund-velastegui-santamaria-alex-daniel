@@ -36,22 +36,26 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var _08_funcion_menu_1 = require("./Funciones/08-funcion-menu");
-var _03_funcion_crear_1 = require("./Funciones/03-funcion-crear");
-function main() {
+var prompts = require("prompts");
+function buscarPeliculaPorIndice(tablaPeliculas) {
     return __awaiter(this, void 0, void 0, function () {
-        var directorio;
+        var idABuscar, indiceEncontrado;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0:
-                    console.log("\n\tBIENVENIDO A SU DIRECTORIO DE PELICULAS");
-                    return [4 /*yield*/, _03_funcion_crear_1.crearDirectorio()];
+                case 0: return [4 /*yield*/, prompts({
+                        type: 'number',
+                        name: 'id',
+                        message: "Ingresa la posicion de la pelicula que busca:",
+                        validate: function (value) { return (value < 0 || value > tablaPeliculas.length) ? "No existe esa posicion de pelicula" : true; }
+                    })];
                 case 1:
-                    directorio = _a.sent();
-                    _08_funcion_menu_1.menu(directorio);
-                    return [2 /*return*/];
+                    idABuscar = _a.sent();
+                    indiceEncontrado = tablaPeliculas.findIndex(function (valorActual, indice, arreglo) {
+                        return valorActual.id == idABuscar.id;
+                    });
+                    return [2 /*return*/, indiceEncontrado];
             }
         });
     });
 }
-main();
+exports.buscarPeliculaPorIndice = buscarPeliculaPorIndice;

@@ -36,22 +36,55 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var _08_funcion_menu_1 = require("./Funciones/08-funcion-menu");
-var _03_funcion_crear_1 = require("./Funciones/03-funcion-crear");
-function main() {
+var prompts = require("prompts");
+var _10_funcion_tabla_1 = require("./10-funcion-tabla");
+var _12_buscar_por_indice_1 = require("./12-buscar-por-indice");
+var _13_buscar_por_nombre_1 = require("./13-buscar-por-nombre");
+var _14_imprimir_objeto_1 = require("./14-imprimir-objeto");
+function buscarPelicula(directorio) {
     return __awaiter(this, void 0, void 0, function () {
-        var directorio;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    console.log("\n\tBIENVENIDO A SU DIRECTORIO DE PELICULAS");
-                    return [4 /*yield*/, _03_funcion_crear_1.crearDirectorio()];
+        var tablaPeliculasBuscar, opcion, opcionRespuesta, numeroDeOpcion, _a, indiceEncontrado, peliculaEncontrada;
+        return __generator(this, function (_b) {
+            switch (_b.label) {
+                case 0: return [4 /*yield*/, _10_funcion_tabla_1.realizarTabla(directorio)];
                 case 1:
-                    directorio = _a.sent();
-                    _08_funcion_menu_1.menu(directorio);
-                    return [2 /*return*/];
+                    tablaPeliculasBuscar = _b.sent();
+                    console.log('\nDesea buscar por:\n');
+                    console.log('1.Posicion de pelicula.');
+                    console.log('2.Nombre de pelicula.\n');
+                    opcion = {
+                        type: 'number',
+                        name: 'numeroDeOpcion',
+                        message: 'Escoge una opcion:',
+                        validate: function (value) { return (value < 0 || value > 2) ? "ESCOGER SOLO DE ENTRE LAS OPCIONES QUE APARECEN EN PANTALLA" : true; }
+                    };
+                    return [4 /*yield*/, prompts(opcion)];
+                case 2:
+                    opcionRespuesta = _b.sent();
+                    numeroDeOpcion = opcionRespuesta.numeroDeOpcion;
+                    _a = numeroDeOpcion;
+                    switch (_a) {
+                        case 1: return [3 /*break*/, 3];
+                        case 2: return [3 /*break*/, 6];
+                    }
+                    return [3 /*break*/, 9];
+                case 3: return [4 /*yield*/, _12_buscar_por_indice_1.buscarPeliculaPorIndice(tablaPeliculasBuscar)];
+                case 4:
+                    indiceEncontrado = _b.sent();
+                    return [4 /*yield*/, _14_imprimir_objeto_1.imprimirObjeto(directorio[indiceEncontrado])];
+                case 5:
+                    _b.sent();
+                    return [3 /*break*/, 9];
+                case 6: return [4 /*yield*/, _13_buscar_por_nombre_1.buscarPeliculaPorNombre(directorio)];
+                case 7:
+                    peliculaEncontrada = _b.sent();
+                    return [4 /*yield*/, _14_imprimir_objeto_1.imprimirObjeto(peliculaEncontrada)];
+                case 8:
+                    _b.sent();
+                    return [3 /*break*/, 9];
+                case 9: return [2 /*return*/];
             }
         });
     });
 }
-main();
+exports.buscarPelicula = buscarPelicula;

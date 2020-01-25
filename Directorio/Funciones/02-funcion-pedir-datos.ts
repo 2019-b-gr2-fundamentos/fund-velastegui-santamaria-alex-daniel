@@ -1,4 +1,4 @@
-import { peliculaInterface } from "./Interfaces/peliculas.interface";
+import { peliculaInterface } from "../Interfaces/peliculas.interface";
 import * as prompts from 'prompts';
 
 export async function pedirDatos()

@@ -36,19 +36,24 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var _02_funcion_pedir_datos_1 = require("./02-funcion-pedir-datos");
-function agregarPelicula(longitud, directorio) {
+var prompts = require("prompts");
+function esperear() {
     return __awaiter(this, void 0, void 0, function () {
-        var peliculaNueva;
+        var esperear, esperarRespuesta;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, _02_funcion_pedir_datos_1.pedirDatos()];
+                case 0:
+                    esperear = {
+                        type: 'text',
+                        nombre: 'esperar',
+                        message: '\nPresione ENTER para continuar'
+                    };
+                    return [4 /*yield*/, prompts(esperear)];
                 case 1:
-                    peliculaNueva = _a.sent();
-                    directorio[longitud] = peliculaNueva;
-                    return [2 /*return*/, directorio];
+                    esperarRespuesta = _a.sent();
+                    return [2 /*return*/];
             }
         });
     });
 }
-exports.agregarPelicula = agregarPelicula;
+exports.esperear = esperear;

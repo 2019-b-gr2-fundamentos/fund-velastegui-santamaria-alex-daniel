@@ -1,6 +1,8 @@
 import * as prompts from 'prompts';
-import { opcionInterface } from './Interfaces/opcion.interface';
+import { opcionInterface } from '../Interfaces/opcion.interface';
 import { pedirDatos } from './02-funcion-pedir-datos';
+import { imprimirPeliculas } from './11-funcion-imprimir';
+import { esperear } from './09-funcion-await';
 export async function crearDirectorio()
 {
     console.log("\nEmpecemos!!\n");
@@ -19,7 +21,9 @@ export async function crearDirectorio()
     {
         directorio[i] = await pedirDatos();
     }
-
+    console.log("\nEl directorio creado es:\n");
+    await imprimirPeliculas(directorio);
+    await esperear(); 
     return directorio;
     
 }

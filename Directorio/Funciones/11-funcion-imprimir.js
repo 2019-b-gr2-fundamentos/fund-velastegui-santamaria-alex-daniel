@@ -36,22 +36,17 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var _08_funcion_menu_1 = require("./Funciones/08-funcion-menu");
-var _03_funcion_crear_1 = require("./Funciones/03-funcion-crear");
-function main() {
+function imprimirPeliculas(directorio) {
     return __awaiter(this, void 0, void 0, function () {
-        var directorio;
+        var longitud, i;
         return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    console.log("\n\tBIENVENIDO A SU DIRECTORIO DE PELICULAS");
-                    return [4 /*yield*/, _03_funcion_crear_1.crearDirectorio()];
-                case 1:
-                    directorio = _a.sent();
-                    _08_funcion_menu_1.menu(directorio);
-                    return [2 /*return*/];
+            longitud = directorio.length;
+            console.log('Posicion\t Nombre');
+            for (i = 1; i <= longitud; i++) {
+                console.log("   " + i + ".\t\t", directorio[i - 1].nombrePelicula + ".");
             }
+            return [2 /*return*/];
         });
     });
 }
-main();
+exports.imprimirPeliculas = imprimirPeliculas;

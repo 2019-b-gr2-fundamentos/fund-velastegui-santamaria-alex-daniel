@@ -1,4 +1,4 @@
-import { opcionInterface } from "./Interfaces/opcion.interface";
+import { opcionInterface } from "../Interfaces/opcion.interface";
 import * as prompts from 'prompts';
 
 export async function funcionOpcion()

@@ -36,22 +36,19 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var _08_funcion_menu_1 = require("./Funciones/08-funcion-menu");
-var _03_funcion_crear_1 = require("./Funciones/03-funcion-crear");
-function main() {
+var _02_funcion_pedir_datos_1 = require("./02-funcion-pedir-datos");
+function agregarPelicula(directorio) {
     return __awaiter(this, void 0, void 0, function () {
-        var directorio;
+        var peliculaNueva;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0:
-                    console.log("\n\tBIENVENIDO A SU DIRECTORIO DE PELICULAS");
-                    return [4 /*yield*/, _03_funcion_crear_1.crearDirectorio()];
+                case 0: return [4 /*yield*/, _02_funcion_pedir_datos_1.pedirDatos()];
                 case 1:
-                    directorio = _a.sent();
-                    _08_funcion_menu_1.menu(directorio);
-                    return [2 /*return*/];
+                    peliculaNueva = _a.sent();
+                    directorio.push(peliculaNueva);
+                    return [2 /*return*/, directorio];
             }
         });
     });
 }
-main();
+exports.agregarPelicula = agregarPelicula;

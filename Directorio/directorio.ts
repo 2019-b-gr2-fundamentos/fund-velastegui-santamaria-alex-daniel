@@ -1,5 +1,5 @@
-import { menu } from "./08-funcion-menu";
-import { crearDirectorio } from "./03-funcion-crear";
+import { menu } from "./Funciones/08-funcion-menu";
+import { crearDirectorio } from "./Funciones/03-funcion-crear";
 
 async function main()
 {
