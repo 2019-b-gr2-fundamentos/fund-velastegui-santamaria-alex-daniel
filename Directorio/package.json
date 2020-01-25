@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "(tsc directorio.ts --target ES5 || echo) && node directorio.js"
+    "test": "(tsc directorio.ts --target ES5 || echo) && node directorio.js",
+    "pruebas": "(tsc pruebas.ts --target ES5 || echo) && node pruebas.js"
   },
   "author": "",
   "license": "ISC",

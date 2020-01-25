@@ -39,12 +39,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var _01_funcion_opcion_1 = require("./01-funcion-opcion");
 var _06_funcion_agregar_1 = require("./06-funcion-agregar");
 var _09_funcion_await_1 = require("./09-funcion-await");
-var _10_funcion_tabla_1 = require("./10-funcion-tabla");
 var _11_funcion_imprimir_1 = require("./11-funcion-imprimir");
 var _04_funcion_buscar_1 = require("./04-funcion-buscar");
+var _07_eliminar_pelicula_1 = require("./07-eliminar-pelicula");
+var _05_funcion_editar_directorio_1 = require("./05-funcion-editar-directorio");
 function menu(directorio) {
     return __awaiter(this, void 0, void 0, function () {
-        var opcion, _a, tablaPeliculasAgregar;
+        var opcion, _a;
         return __generator(this, function (_b) {
             switch (_b.label) {
                 case 0:
@@ -60,22 +61,24 @@ function menu(directorio) {
                     _a = opcion;
                     switch (_a) {
                         case 1: return [3 /*break*/, 2];
-                        case 2: return [3 /*break*/, 3];
-                        case 3: return [3 /*break*/, 4];
-                        case 4: return [3 /*break*/, 5];
+                        case 2: return [3 /*break*/, 6];
+                        case 3: return [3 /*break*/, 11];
+                        case 4: return [3 /*break*/, 16];
                     }
-                    return [3 /*break*/, 10];
-                case 2:
-                    _04_funcion_buscar_1.buscarPelicula(directorio);
-                    return [3 /*break*/, 11];
-                case 3: return [3 /*break*/, 11];
-                case 4: return [3 /*break*/, 11];
-                case 5: return [4 /*yield*/, _06_funcion_agregar_1.agregarPelicula(directorio)];
-                case 6:
-                    directorio = _b.sent();
-                    return [4 /*yield*/, _10_funcion_tabla_1.realizarTabla(directorio)];
+                    return [3 /*break*/, 21];
+                case 2: return [4 /*yield*/, _04_funcion_buscar_1.buscarPelicula(directorio)];
+                case 3:
+                    _b.sent();
+                    return [4 /*yield*/, _09_funcion_await_1.esperear()];
+                case 4:
+                    _b.sent();
+                    return [4 /*yield*/, menu(directorio)];
+                case 5:
+                    _b.sent();
+                    return [3 /*break*/, 22];
+                case 6: return [4 /*yield*/, _05_funcion_editar_directorio_1.editarDirectorio(directorio)];
                 case 7:
-                    tablaPeliculasAgregar = _b.sent();
+                    directorio = _b.sent();
                     console.log("\nLas peliculas actuales son:\n");
                     return [4 /*yield*/, _11_funcion_imprimir_1.imprimirPeliculas(directorio)];
                 case 8:
@@ -83,12 +86,42 @@ function menu(directorio) {
                     return [4 /*yield*/, _09_funcion_await_1.esperear()];
                 case 9:
                     _b.sent();
-                    menu(directorio);
-                    return [3 /*break*/, 11];
+                    return [4 /*yield*/, menu(directorio)];
                 case 10:
+                    _b.sent();
+                    return [3 /*break*/, 22];
+                case 11: return [4 /*yield*/, _07_eliminar_pelicula_1.eliminarPelicula(directorio)];
+                case 12:
+                    directorio = _b.sent();
+                    console.log("\nLas peliculas actuales son:\n");
+                    return [4 /*yield*/, _11_funcion_imprimir_1.imprimirPeliculas(directorio)];
+                case 13:
+                    _b.sent();
+                    return [4 /*yield*/, _09_funcion_await_1.esperear()];
+                case 14:
+                    _b.sent();
+                    return [4 /*yield*/, menu(directorio)];
+                case 15:
+                    _b.sent();
+                    return [3 /*break*/, 22];
+                case 16: return [4 /*yield*/, _06_funcion_agregar_1.agregarPelicula(directorio)];
+                case 17:
+                    directorio = _b.sent();
+                    console.log("\nLas peliculas actuales son:\n");
+                    return [4 /*yield*/, _11_funcion_imprimir_1.imprimirPeliculas(directorio)];
+                case 18:
+                    _b.sent();
+                    return [4 /*yield*/, _09_funcion_await_1.esperear()];
+                case 19:
+                    _b.sent();
+                    return [4 /*yield*/, menu(directorio)];
+                case 20:
+                    _b.sent();
+                    return [3 /*break*/, 22];
+                case 21:
                     console.log("\nHASTA LUEGO!!");
-                    return [3 /*break*/, 11];
-                case 11: return [2 /*return*/];
+                    return [3 /*break*/, 22];
+                case 22: return [2 /*return*/];
             }
         });
     });

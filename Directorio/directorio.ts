@@ -5,6 +5,6 @@ async function main()
 {
     console.log("\n\tBIENVENIDO A SU DIRECTORIO DE PELICULAS");
     const directorio = await crearDirectorio();
-    menu(directorio);
+    await menu(directorio);
 }
 main();
