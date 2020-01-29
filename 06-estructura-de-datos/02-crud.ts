@@ -42,7 +42,7 @@ promesaEdad
         promesaNombre
             .then(
                 (datos)=>{
-                    console.log('datosNombre', datos); // AQUI RECIBO LA EDAD
+                    console.log('datosNombre', datos); // AQUI RECIBO EL NOMBRE
                 }
             )
             .catch(

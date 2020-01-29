@@ -46,8 +46,8 @@ function editarPelicula(pelicula) {
             switch (_b.label) {
                 case 0:
                     console.log("\nDe la pelicula " + pelicula.nombrePelicula + "Que desea editar:\n");
-                    console.log('1.Nombre:\t\t', pelicula.nombrePelicula);
-                    console.log('2.Genero:\t\t', pelicula.generoPelicula);
+                    console.log('1.Nombre:\t', pelicula.nombrePelicula);
+                    console.log('2.Genero:\t', pelicula.generoPelicula);
                     console.log('3.Director:\t', pelicula.directorPelicula);
                     console.log('4.Protagonista:\t', pelicula.protagonistaPelicula);
                     console.log('5.Duracion:\t', pelicula.duracionPelicula);
