@@ -1,3 +1,8 @@
+import { filter } from "./02-filter";
+import { every } from "./03-every";
+import { some } from "./04-some";
+import { forEach } from "./04-forEach";
+
 function main()
 {
     const arregloEstudiantes = 
@@ -14,9 +19,9 @@ function main()
     Enviamos -> NADA
     Recibimos -> NADA
     */
-   const respuestaDelForEach = arregloEstudiantes.forEach(
+   arregloEstudiantes.forEach(
        function(valorActual, indice, arreglo){
-        //valorActual.nota20 = valorActual.nota * 2;
+        //valorActual.nota = valorActual.nota * 2;
        }
    );
 
@@ -99,6 +104,24 @@ function main()
   //console.log("respeustaFilterNombre", respuestaFilterNombre);
   //console.log("respuestaEvery:", respuestaEvery);
   //console.log("respuestaReduce", respuestaReduce);
-  console.log("arregloEstudiantes", arregloEstudiantes);
+  console.log("arregloEstudiantes\n", arregloEstudiantes);
+
+const respuestaFilterNuestro = filter(arregloEstudiantes, function(valorActual){
+    return valorActual.nota == 7; 
+});
+const respuestaEveryNuestro = every(arregloEstudiantes, function(valorActual){
+    return valorActual.nota > 3;
+})
+const respuestaSomeNuestro = some(arregloEstudiantes, function(valorActual){
+    return valorActual.nota == 0;
+})
+forEach(arregloEstudiantes, function(valorActual){  
+    valorActual.nota = valorActual.nota*10;
+})
+
+//console.log("respuestaFilterNuestro:",respuestaFilterNuestro);
+//console.log("respuestaEveryNuestro:", respuestaEveryNuestro);
+//console.log("respuestaSomeNuestro:", respuestaSomeNuestro);
+console.log("respuestaDelForEachNuestro\n", arregloEstudiantes)
 }
 main();

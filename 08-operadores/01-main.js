@@ -1,3 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var _02_filter_1 = require("./02-filter");
+var _03_every_1 = require("./03-every");
+var _04_some_1 = require("./04-some");
+var _04_forEach_1 = require("./04-forEach");
 function main() {
     var arregloEstudiantes = [
         { id: 1, nombre: "Daniel", nota: 7 },
@@ -11,8 +17,8 @@ function main() {
     Enviamos -> NADA
     Recibimos -> NADA
     */
-    var respuestaDelForEach = arregloEstudiantes.forEach(function (valorActual, indice, arreglo) {
-        //valorActual.nota20 = valorActual.nota * 2;
+    arregloEstudiantes.forEach(function (valorActual, indice, arreglo) {
+        //valorActual.nota = valorActual.nota * 2;
     });
     //OPERADOR MAP -> TRANSFORMAR EL ARREGLO
     /*
@@ -60,7 +66,8 @@ function main() {
         var condicion = valorActual.nota >= 4;
         return condicion;
     });
-    //OPERADOR REDUCE -> Aplica el calculo a cada iteracion y devuleve un valor 
+    //OPERADOR REDUCE -> Aplica el calculo a cada iteracion y devuleve un valor (principio a fin)
+    //OPERADOR REDUCEREIGHT -> DEL FIN AL PRINCIPIO
     /*
     Enviamos  -> Calculo
     Recibimos -> Valor
@@ -76,7 +83,23 @@ function main() {
     //console.log("respuestaSome", respuestaSome);
     //console.log("respeustaFilterNombre", respuestaFilterNombre);
     //console.log("respuestaEvery:", respuestaEvery);
-    console.log("respuestaReduce", respuestaReduce);
-    console.log("arregloEstudiantes", arregloEstudiantes);
+    //console.log("respuestaReduce", respuestaReduce);
+    console.log("arregloEstudiantes\n", arregloEstudiantes);
+    var respuestaFilterNuestro = _02_filter_1.filter(arregloEstudiantes, function (valorActual) {
+        return valorActual.nota == 7;
+    });
+    var respuestaEveryNuestro = _03_every_1.every(arregloEstudiantes, function (valorActual) {
+        return valorActual.nota > 3;
+    });
+    var respuestaSomeNuestro = _04_some_1.some(arregloEstudiantes, function (valorActual) {
+        return valorActual.nota == 0;
+    });
+    _04_forEach_1.forEach(arregloEstudiantes, function (valorActual) {
+        valorActual.nota = valorActual.nota * 10;
+    });
+    //console.log("respuestaFilterNuestro:",respuestaFilterNuestro);
+    //console.log("respuestaEveryNuestro:", respuestaEveryNuestro);
+    //console.log("respuestaSomeNuestro:", respuestaSomeNuestro);
+    console.log("respuestaDelForEachNuestro\n", arregloEstudiantes);
 }
 main();
