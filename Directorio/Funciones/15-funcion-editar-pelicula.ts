@@ -5,7 +5,7 @@ import { imprimirObjeto } from './14-imprimir-objeto';
 
 export async function editarPelicula(pelicula:peliculaInterface)
 {
-    console.log("\nDe la pelicula " + pelicula.nombrePelicula + "Que desea editar:\n");
+    console.log("\nDe la pelicula " + pelicula.nombrePelicula + " que desea editar:\n");
     console.log('1.Nombre:\t', pelicula.nombrePelicula);
     console.log('2.Genero:\t',pelicula.generoPelicula);
     console.log('3.Director:\t',pelicula.directorPelicula);

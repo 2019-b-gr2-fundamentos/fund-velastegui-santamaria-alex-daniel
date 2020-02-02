@@ -43,9 +43,10 @@ var _11_funcion_imprimir_1 = require("./11-funcion-imprimir");
 var _04_funcion_buscar_1 = require("./04-funcion-buscar");
 var _07_eliminar_pelicula_1 = require("./07-eliminar-pelicula");
 var _05_funcion_editar_directorio_1 = require("./05-funcion-editar-directorio");
+var _03_escribir_archivo_1 = require("../../07-archivos/03-escribir-archivo");
 function menu(directorio) {
     return __awaiter(this, void 0, void 0, function () {
-        var opcion, _a;
+        var opcion, _a, directorioTextoEditar, directorioTextoEliminar, directorioTextoAgregar;
         return __generator(this, function (_b) {
             switch (_b.label) {
                 case 0:
@@ -83,6 +84,8 @@ function menu(directorio) {
                     return [4 /*yield*/, _11_funcion_imprimir_1.imprimirPeliculas(directorio)];
                 case 8:
                     _b.sent();
+                    directorioTextoEditar = JSON.stringify(directorio);
+                    _03_escribir_archivo_1.escribirArchivo('./base-de-datos.txt', directorioTextoEditar);
                     return [4 /*yield*/, _09_funcion_await_1.esperear()];
                 case 9:
                     _b.sent();
@@ -97,6 +100,8 @@ function menu(directorio) {
                     return [4 /*yield*/, _11_funcion_imprimir_1.imprimirPeliculas(directorio)];
                 case 13:
                     _b.sent();
+                    directorioTextoEliminar = JSON.stringify(directorio);
+                    _03_escribir_archivo_1.escribirArchivo('./base-de-datos.txt', directorioTextoEliminar);
                     return [4 /*yield*/, _09_funcion_await_1.esperear()];
                 case 14:
                     _b.sent();
@@ -111,6 +116,8 @@ function menu(directorio) {
                     return [4 /*yield*/, _11_funcion_imprimir_1.imprimirPeliculas(directorio)];
                 case 18:
                     _b.sent();
+                    directorioTextoAgregar = JSON.stringify(directorio);
+                    _03_escribir_archivo_1.escribirArchivo('./base-de-datos.txt', directorioTextoAgregar);
                     return [4 /*yield*/, _09_funcion_await_1.esperear()];
                 case 19:
                     _b.sent();

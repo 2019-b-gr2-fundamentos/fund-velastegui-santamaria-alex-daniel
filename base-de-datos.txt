@@ -1,0 +1,1 @@
+[{"nombrePelicula":"Iron Man","generoPelicula":"Ciencia Ficcion","duracionPelicula":126,"directorPelicula":"Jon Favreau","protagonistaPelicula":"Robert Downey Jr."},{"nombrePelicula":"Dedicada A Mi Ex","generoPelicula":"Comedia","duracionPelicula":94,"directorPelicula":"Jorge Ulloa","protagonistaPelicula":"Ariel"}]

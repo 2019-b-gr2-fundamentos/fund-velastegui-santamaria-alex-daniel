@@ -38,20 +38,32 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var _08_funcion_menu_1 = require("./Funciones/08-funcion-menu");
 var _03_funcion_crear_1 = require("./Funciones/03-funcion-crear");
+var _02_leer_archivo_1 = require("../07-archivos/02-leer-archivo");
+var _03_escribir_archivo_1 = require("../07-archivos/03-escribir-archivo");
 function main() {
     return __awaiter(this, void 0, void 0, function () {
-        var directorio;
+        var directorio, error_1, directorioTexto;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
+                    directorio = [];
+                    _a.label = 1;
+                case 1:
+                    _a.trys.push([1, 2, , 4]);
+                    directorio = JSON.parse(_02_leer_archivo_1.leerArchivo('./base-de-datos.txt'));
+                    _08_funcion_menu_1.menu(directorio);
+                    return [3 /*break*/, 4];
+                case 2:
+                    error_1 = _a.sent();
                     console.log("\n\tBIENVENIDO A SU DIRECTORIO DE PELICULAS");
                     return [4 /*yield*/, _03_funcion_crear_1.crearDirectorio()];
-                case 1:
+                case 3:
                     directorio = _a.sent();
-                    return [4 /*yield*/, _08_funcion_menu_1.menu(directorio)];
-                case 2:
-                    _a.sent();
-                    return [2 /*return*/];
+                    directorioTexto = JSON.stringify(directorio);
+                    _03_escribir_archivo_1.escribirArchivo('./base-de-datos.txt', directorioTexto);
+                    _08_funcion_menu_1.menu(directorio);
+                    return [3 /*break*/, 4];
+                case 4: return [2 /*return*/];
             }
         });
     });

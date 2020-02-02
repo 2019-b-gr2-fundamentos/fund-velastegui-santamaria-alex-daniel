@@ -5,6 +5,7 @@ import { imprimirPeliculas } from "./11-funcion-imprimir";
 import { buscarPelicula } from "./04-funcion-buscar";
 import { eliminarPelicula } from "./07-eliminar-pelicula";
 import { editarDirectorio } from "./05-funcion-editar-directorio";
+import { escribirArchivo } from "../../07-archivos/03-escribir-archivo";
 
 export async function menu(directorio: any[])
 {
@@ -25,7 +26,9 @@ export async function menu(directorio: any[])
         case 2:
             directorio = await editarDirectorio(directorio);
             console.log("\nLas peliculas actuales son:\n");
-            await imprimirPeliculas(directorio)   
+            await imprimirPeliculas(directorio);
+            const directorioTextoEditar = JSON.stringify(directorio);
+            escribirArchivo('./base-de-datos.txt', directorioTextoEditar);   
             await esperear();
             await menu(directorio);
             break;
@@ -33,13 +36,17 @@ export async function menu(directorio: any[])
             directorio = await eliminarPelicula(directorio);
             console.log("\nLas peliculas actuales son:\n");
             await imprimirPeliculas(directorio);
+            const directorioTextoEliminar = JSON.stringify(directorio);
+            escribirArchivo('./base-de-datos.txt', directorioTextoEliminar); 
             await esperear()
             await menu(directorio);
             break;
         case 4:
             directorio = await agregarPelicula(directorio);
             console.log("\nLas peliculas actuales son:\n");
-            await imprimirPeliculas(directorio)            
+            await imprimirPeliculas(directorio);
+            const directorioTextoAgregar = JSON.stringify(directorio);
+            escribirArchivo('./base-de-datos.txt', directorioTextoAgregar);             
             await esperear(); 
             await menu(directorio);
             break;
