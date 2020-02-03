@@ -97,9 +97,19 @@ function main() {
     _04_forEach_1.forEach(arregloEstudiantes, function (valorActual) {
         valorActual.nota = valorActual.nota * 10;
     });
+    var respuestaDelMapNuestro = arregloEstudiantes.map(function (valorActual, i, arreglo) {
+        var nuevoObjeto = {
+            id: valorActual.id,
+            nombre: valorActual.nombre,
+            //nota:valorActual.nota,
+            nota20: valorActual.nota * 3
+        };
+        return nuevoObjeto;
+    });
     //console.log("respuestaFilterNuestro:",respuestaFilterNuestro);
     //console.log("respuestaEveryNuestro:", respuestaEveryNuestro);
     //console.log("respuestaSomeNuestro:", respuestaSomeNuestro);
-    console.log("respuestaDelForEachNuestro\n", arregloEstudiantes);
+    //console.log("respuestaDelForEachNuestro\n", arregloEstudiantes)
+    console.log("respuestaDelMapNUestro", respuestaDelMapNuestro);
 }
 main();

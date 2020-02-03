@@ -116,12 +116,24 @@ const respuestaSomeNuestro = some(arregloEstudiantes, function(valorActual){
     return valorActual.nota == 0;
 })
 forEach(arregloEstudiantes, function(valorActual){  
-    valorActual.nota = valorActual.nota*10;
+    //valorActual.nota = valorActual.nota*10;
 })
+const respuestaDelMapNuestro = arregloEstudiantes.map(
+    function(valorActual, i, arreglo){
+        const nuevoObjeto ={
+            id:valorActual.id,
+            nombre:valorActual.nombre,
+            //nota:valorActual.nota,
+            nota20:valorActual.nota * 3
+        }
+        return nuevoObjeto;
+    }
+);
 
 //console.log("respuestaFilterNuestro:",respuestaFilterNuestro);
 //console.log("respuestaEveryNuestro:", respuestaEveryNuestro);
 //console.log("respuestaSomeNuestro:", respuestaSomeNuestro);
-console.log("respuestaDelForEachNuestro\n", arregloEstudiantes)
+//console.log("respuestaDelForEachNuestro\n", arregloEstudiantes)
+console.log("respuestaDelMapNUestro", respuestaDelMapNuestro)
 }
 main();
