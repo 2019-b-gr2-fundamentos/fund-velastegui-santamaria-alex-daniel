@@ -4,6 +4,8 @@ var _02_filter_1 = require("./02-filter");
 var _03_every_1 = require("./03-every");
 var _04_some_1 = require("./04-some");
 var _04_forEach_1 = require("./04-forEach");
+var _05_map_1 = require("./05-map");
+var _06_reduce_1 = require("./06-reduce");
 function main() {
     var arregloEstudiantes = [
         { id: 1, nombre: "Daniel", nota: 7 },
@@ -83,8 +85,7 @@ function main() {
     //console.log("respuestaSome", respuestaSome);
     //console.log("respeustaFilterNombre", respuestaFilterNombre);
     //console.log("respuestaEvery:", respuestaEvery);
-    //console.log("respuestaReduce", respuestaReduce);
-    console.log("arregloEstudiantes\n", arregloEstudiantes);
+    console.log("respuestaReduce", respuestaReduce);
     var respuestaFilterNuestro = _02_filter_1.filter(arregloEstudiantes, function (valorActual) {
         return valorActual.nota == 7;
     });
@@ -95,9 +96,9 @@ function main() {
         return valorActual.nota == 0;
     });
     _04_forEach_1.forEach(arregloEstudiantes, function (valorActual) {
-        valorActual.nota = valorActual.nota * 10;
+        //valorActual.nota = valorActual.nota*10;
     });
-    var respuestaDelMapNuestro = arregloEstudiantes.map(function (valorActual, i, arreglo) {
+    var respuestaDelMapNuestro = _05_map_1.map(arregloEstudiantes, function (valorActual, i, arreglo) {
         var nuevoObjeto = {
             id: valorActual.id,
             nombre: valorActual.nombre,
@@ -106,10 +107,16 @@ function main() {
         };
         return nuevoObjeto;
     });
+    var respuestaDelReduceNuestro = _06_reduce_1.reduce(arregloEstudiantes, function (acumulador, valorActual, i, arreglo) {
+        var calculo = acumulador + valorActual.nota;
+        return calculo;
+    }, 0);
     //console.log("respuestaFilterNuestro:",respuestaFilterNuestro);
     //console.log("respuestaEveryNuestro:", respuestaEveryNuestro);
     //console.log("respuestaSomeNuestro:", respuestaSomeNuestro);
     //console.log("respuestaDelForEachNuestro\n", arregloEstudiantes)
-    console.log("respuestaDelMapNUestro", respuestaDelMapNuestro);
+    //console.log("respuestaDelMapNUestro", respuestaDelMapNuestro);
+    console.log("arregloEstudiantes\n", arregloEstudiantes);
+    //console.log("respuestaDelReduceNuestro\n", respuestaDelReduceNuestro);
 }
 main();

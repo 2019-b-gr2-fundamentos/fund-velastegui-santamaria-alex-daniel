@@ -1,6 +1,6 @@
 export function map(
     arreglo: any[],
-    funcion: (valorActual:any, indice?:number, arreglo?:any[]) => any[]
+    funcion: (valorActual:any, indice?:number, arreglo?:any[]) => any
 ):any[]{
     const arregloModificado = [];
     const arregloCopia = [...arreglo]

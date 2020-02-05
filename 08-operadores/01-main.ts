@@ -2,6 +2,8 @@ import { filter } from "./02-filter";
 import { every } from "./03-every";
 import { some } from "./04-some";
 import { forEach } from "./04-forEach";
+import { map } from "./05-map";
+import { reduce } from "./06-reduce";
 
 function main()
 {
@@ -103,8 +105,8 @@ function main()
   //console.log("respuestaSome", respuestaSome);
   //console.log("respeustaFilterNombre", respuestaFilterNombre);
   //console.log("respuestaEvery:", respuestaEvery);
-  //console.log("respuestaReduce", respuestaReduce);
-  console.log("arregloEstudiantes\n", arregloEstudiantes);
+  console.log("respuestaReduce", respuestaReduce);
+  
 
 const respuestaFilterNuestro = filter(arregloEstudiantes, function(valorActual){
     return valorActual.nota == 7; 
@@ -118,7 +120,7 @@ const respuestaSomeNuestro = some(arregloEstudiantes, function(valorActual){
 forEach(arregloEstudiantes, function(valorActual){  
     //valorActual.nota = valorActual.nota*10;
 })
-const respuestaDelMapNuestro = arregloEstudiantes.map(
+const respuestaDelMapNuestro = map(arregloEstudiantes, 
     function(valorActual, i, arreglo){
         const nuevoObjeto ={
             id:valorActual.id,
@@ -129,11 +131,18 @@ const respuestaDelMapNuestro = arregloEstudiantes.map(
         return nuevoObjeto;
     }
 );
+const respuestaDelReduceNuestro =reduce(arregloEstudiantes, 
+    function(acumulador, valorActual, i, arreglo){
+        const calculo = acumulador + valorActual.nota;
+        return calculo;
+    },0)
 
 //console.log("respuestaFilterNuestro:",respuestaFilterNuestro);
 //console.log("respuestaEveryNuestro:", respuestaEveryNuestro);
 //console.log("respuestaSomeNuestro:", respuestaSomeNuestro);
 //console.log("respuestaDelForEachNuestro\n", arregloEstudiantes)
-console.log("respuestaDelMapNUestro", respuestaDelMapNuestro)
+//console.log("respuestaDelMapNUestro", respuestaDelMapNuestro);
+console.log("arregloEstudiantes\n", arregloEstudiantes);
+//console.log("respuestaDelReduceNuestro\n", respuestaDelReduceNuestro);
 }
 main();
